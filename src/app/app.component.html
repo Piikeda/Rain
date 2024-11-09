@@ -1,0 +1,49 @@
+<style>
+   @keyframes animateColor{
+      0%{
+        filter: hue-rotate(0deg);
+      }
+      100%{
+        filter: hue-rotate(360deg)
+      }
+   }
+  .container .cloud {
+    position: relative;
+    width: 300px;
+    z-index: 100;
+    filter: drop-shadow(0 0 35px var(--crl));
+  }
+  .container .cloud h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #000;
+    font-size: 2em;
+    z-index: 1000;
+    font-weight: 400;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background: var(--crl);
+  }
+  .container .cloud h2::before {
+    content: '';
+    position: absolute;
+    top: -115px;
+    left 50%;
+    transform: translateX(-50%);
+    border-radius: 100px;
+    width: 120%;
+    height: 100px;
+    background: var(--crl);
+  }
+</style>
+
+<div class="content" role="main">
+  <div class="container">
+    <div class="cloud">
+      <h2>Matrix Rain</h2>
+    </div>
+  </div>
+</div>
